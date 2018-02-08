@@ -196,8 +196,8 @@ You can set the priorities of your constraints using the `~` operator:
 
 ```swift
 constrain(view) { view in
-    view.width  >= 200 ~ 100
-    view.height >= 200 ~ 100
+    view.width  >= 200 ~ UILayoutPriority(100)
+    view.height >= 200 ~ .required
 }
 ```
 
@@ -221,7 +221,7 @@ Note that declaring compound attributes returns multiple constraints at once:
 var constraints: [NSLayoutConstraint]?
 
 constrain(view) { view in
-    constraints = (view.size == view.superview!.size ~ 100)
+    constraints = (view.size == view.superview!.size ~ .defaultLow)
 }
 ```
 
@@ -231,8 +231,9 @@ Read the documentation [here](http://robb.github.io/Cartography/). For more info
 
 ## Versioning
 
-For *Swift 3.x*: 1.1.0
-For *Swift 4.x*: 2.0.0
+For *Swift 3.x*: Versions <= 1.1.0
+
+For *Swift 4.x*: Versions >= 2.0.0
 
 ## Support
 
