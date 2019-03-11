@@ -8,6 +8,12 @@
 
 import Foundation
 
+#if os(iOS) || os(tvOS)
+import UIKit
+#elseif os(OSX)
+import AppKit
+#endif
+
 public protocol LayoutProxy: class {
     var context: Context { get }
     var item: AnyObject { get } //type-erased Layoutitem
@@ -15,11 +21,11 @@ public protocol LayoutProxy: class {
 
 extension LayoutProxy {
     #if os(iOS) || os(tvOS)
-    internal func dimension(with attribute: NSLayoutAttribute) -> Dimension {
+    internal func dimension(with attribute: NSLayoutConstraint.Attribute) -> Dimension {
         return Dimension(context, item, attribute)
     }
 
-    internal func edge(with attribute: NSLayoutAttribute) -> Edge {
+    internal func edge(with attribute: NSLayoutConstraint.Attribute) -> Edge {
         return Edge(context, item, attribute)
     }
     #elseif os(OSX)
