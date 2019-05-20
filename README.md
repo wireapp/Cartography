@@ -36,8 +36,6 @@ constrain(button1, button2) { button1, button2 in
 
 If you end up using Cartography in production, I'd love to hear from you. You can reach me through [Twitter] or [email].
 
-If you need Swift 2.x support, then please use `0.7.0` and below.
-
 ## Installation
 
 ### CocoaPods
@@ -252,6 +250,8 @@ Read the documentation [here](http://robb.github.io/Cartography/). For more info
 For *Swift 3.x*: Versions <= 1.1.0
 
 For *Swift 4.x*: Versions >= 2.0.0
+
+For *Swift 5.x*: Versions >= 4.0.0
 
 ## Support
 
