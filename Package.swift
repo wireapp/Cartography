@@ -12,7 +12,7 @@ let package = Package(
     targets: [
         .target(
             name: "Cartography",
-            dependencies: [])
+            path: "Cartography")
     ],
     swiftLanguageVersions: [.v5]
 )
