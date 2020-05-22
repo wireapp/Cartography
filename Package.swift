@@ -11,8 +11,10 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Cartography",
-            path: "Cartography"
-        )
+            name: "Cartography-iOS",
+            dependencies: []),
+        .testTarget(
+            name: "Cartography-iOS-Tests",
+            dependencies: ["Cartography-iOS"]),
     ]
 )
