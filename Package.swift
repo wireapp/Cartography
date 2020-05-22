@@ -11,10 +11,8 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Cartography-iOS",
-            dependencies: []),
-        .testTarget(
-            name: "Cartography-iOS-Tests",
-            dependencies: ["Cartography-iOS"]),
-    ]
+            name: "Cartography",
+            dependencies: [])
+    ],
+    swiftLanguageVersions: [.v5]
 )
