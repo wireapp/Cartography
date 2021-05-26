@@ -12,7 +12,12 @@ let package = Package(
     targets: [
         .target(
             name: "Cartography",
-            path: "Cartography")
+            path: "Cartography"),
+        .binaryTarget(
+            name: "CartographyRemoteBinaryPackage",
+            url: "https://github.com/wireapp/Cartography/releases/download/4.0.0_xcframework/Cartography.xcframework.zip",
+            checksum: "395082e21c6d04dddba03f52b35be235a06d5cfa199569489f4bbad44fc4988f"
+        )
     ],
     swiftLanguageVersions: [.v5]
 )
