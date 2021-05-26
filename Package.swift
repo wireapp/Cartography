@@ -11,8 +11,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Cartography",
-            path: "Cartography"),
+            name: "Cartography"),
         .binaryTarget(
             name: "Cartography",
             url: "https://github.com/wireapp/Cartography/releases/download/4.0.0_xcframework/Cartography.xcframework.zip",
